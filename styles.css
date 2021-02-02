@@ -1,0 +1,217 @@
+@import "https://fonts.googleapis.com/css?family=Lato:400,700";
+
+/* css reset  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eee;
+  font-family: "Lato", sans-serif;
+}
+
+/* Navigation styling  */
+#nav-bar {
+  display: flex;
+  align-items: center;
+  background-color: #eee;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+/* Making Navigation responsive */
+@media (max-width: 860px) {
+  #nav-bar {
+    flex-direction: column;
+  }
+}
+
+.logo {
+  margin: 30px 37px;
+}
+
+.logo img {
+  width: 292px;
+  height: 38px;
+}
+
+#nav-bar ul {
+  display: flex;
+  /* To align one flex child to the right set it with margin-left: auto; */
+  /* This can be acheived by putting justify-content: space-between;   The extra space will be divided between. */
+  margin-left: auto;
+  margin-right: 41px;
+}
+
+@media (max-width: 860px) {
+  #nav-bar ul {
+    margin-left: 0;
+    margin-right: 0px;
+  }
+}
+
+#nav-bar ul li {
+  list-style: none;
+}
+
+#nav-bar ul li a {
+  text-decoration: none;
+  color: black;
+  margin: 0px 40px;
+}
+
+@media (max-width: 500px) {
+  #nav-bar ul li a {
+    font-size: 1rem;
+    padding: 0px 0px;
+    margin: 0px 10px;
+  }
+}
+
+/* Hero section styling  */
+#Hero-Section {
+  text-align: center;
+  /* The navigation will not remains in the normal flow and will stick to top, so we have to give the second section the margin-top so that we can see the second section.  */
+  margin-top: 100px;
+}
+
+@media (max-width: 860px) {
+  #Hero-Section {
+    margin-top: 200px;
+  }
+}
+
+#title {
+  margin-bottom: 20px;
+}
+
+input[type="email"] {
+  display: block;
+  margin: 0 auto 15px auto;
+  height: 31px;
+  width: 274px;
+  padding: 6px;
+}
+
+input[type="submit"] {
+  height: 29px;
+  width: 150px;
+  border: none;
+  background-color: #f1c40f;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+/* Features section styling  */
+#Features-container {
+  margin-top: 50px;
+}
+
+.features {
+  display: flex;
+}
+
+.icon i {
+  display: flex;
+  height: 100px;
+  width: 20vw;
+  color: darkorange;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 500px) {
+  .icon i {
+    /* // will not show but will remains in the normal flow.  */
+    visibility: hidden;
+  }
+}
+
+.heading-paragraph {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  justify-content: center;
+  width: 80vw;
+}
+
+/* Styling how-it-works section.  */
+#how-it-works {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+/****************************** 
+         Video can be aligned center like that
+         #how-it-works iframe {
+            display: block;
+            margin: auto;
+       }
+       But in this method we have to target iframe not parent because iframe is an inline element. 
+        ****************************** */
+
+#how-it-works iframe {
+  width: 600px;
+  height: 350px;
+}
+
+/* Pricing Section styling  */
+#pricing-section {
+  margin: 50px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 700px) {
+  #pricing-section {
+    flex-direction: column;
+  }
+}
+
+#pricing-section .box {
+  border: 1px solid black;
+  border-radius: 4px;
+  width: 330px;
+  height: 330px;
+  text-align: center;
+  margin: 0 8px;
+}
+
+#pricing-section .box h3 {
+  background-color: wheat;
+  padding: 13px;
+}
+
+#pricing-section .box h2,
+#pricing-section .box p {
+  margin: 18px;
+}
+
+.btn-pricing {
+  margin-top: 15px;
+}
+
+#footer {
+  width: 80%;
+  margin: auto;
+  height: 100px;
+  background-color: #dddddd;
+}
+
+#footer #box p {
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 1rem;
+  padding: 0px 6px 6px 0px;
+}
+
+#footer #box #footer-menu {
+  font-weight: bold;
+  padding: 12px;
+  cursor: pointer;
+}
